@@ -39,7 +39,48 @@ const services = [
             "Continuous Testing",
             "In-depth Reporting with Actionable Recommendations"
         ]
+    },
+    {
+        title: "Security Consulting",
+        description: "Provide expert guidance to help organizations improve their security posture, address vulnerabilities, and meet compliance requirements.",
+        features: [
+            "Security Risk Assessment",
+            "Security Strategy Development",
+            "Regulatory Compliance Advisory",
+            "Incident Response Planning"
+        ]
+    },
+    {
+        title: "Cloud Security",
+        description: "Comprehensive solutions to secure cloud infrastructure, applications, and data across multiple platforms, ensuring a robust defense against cloud-based threats.",
+        features: [
+            "Cloud Security Architecture",
+            "Cloud Access Security Broker (CASB)",
+            "Cloud Security Configuration Reviews",
+            "Cloud Data Protection and Encryption"
+        ]
+    },
+    {
+        title: "Application Security",
+        description: "Safeguard applications from security vulnerabilities with proactive measures and ongoing testing, ensuring secure software development and deployment.",
+        features: [
+            "Secure Software Development Lifecycle (SDLC) Integration",
+            "Static and Dynamic Code Analysis",
+            "Vulnerability Scanning and Patching",
+            "Security Code Reviews"
+        ]
+    },
+    {
+        title: "End-Point Security",
+        description: "Implement robust solutions to protect endpoints, including desktops, laptops, and mobile devices, from cyber threats and unauthorized access.",
+        features: [
+            "Anti-malware Protection",
+            "Device Encryption and Management",
+            "Endpoint Detection and Response (EDR)",
+            "Mobile Device Management (MDM)"
+        ]
     }
+
 ];
 
 const solutions = [
@@ -78,7 +119,48 @@ const solutions = [
             "Security Architecture Design",
             "Compliance Management"
         ]
+    },
+    {
+        title: "Security Analytics",
+        description: "Leverage advanced analytics to gain real-time insights into threats, vulnerabilities, and overall security posture to make informed decisions.",
+        features: [
+            "Threat Intelligence and Detection",
+            "Real-time Security Monitoring",
+            "Behavioral Analytics",
+            "Automated Incident Response"
+        ]
+    },
+    {
+        title: "End-Point Protection",
+        description: "Comprehensive solutions to safeguard endpoints from cyber threats and unauthorized access, ensuring the protection of devices across the network.",
+        features: [
+            "Endpoint Detection and Response (EDR)",
+            "Anti-malware and Antivirus Solutions",
+            "Device Control and Encryption",
+            "Incident Response Integration"
+        ]
+    },
+    {
+        title: "Identity & Access Management (IAM)",
+        description: "Implement robust authentication and access control mechanisms to ensure that only authorized users can access sensitive systems and data.",
+        features: [
+            "Single Sign-On (SSO)",
+            "Multi-Factor Authentication (MFA)",
+            "Role-Based Access Control (RBAC)",
+            "User Provisioning and De-provisioning"
+        ]
+    },
+    {
+        title: "Incident Response",
+        description: "Enable swift detection, containment, and resolution of security incidents, minimizing the impact of breaches and ensuring business continuity.",
+        features: [
+            "Incident Detection and Response Workflow",
+            "Forensic Analysis and Investigation",
+            "Threat Containment and Remediation",
+            "Post-Incident Reporting and Lessons Learned"
+        ]
     }
+
 ];
 
 const complianceStandards = [
@@ -97,7 +179,16 @@ const complianceStandards = [
     {
         title: "HIPAA",
         description: "Adhere to the Health Insurance Portability and Accountability Act, ensuring healthcare data security and privacy compliance."
+    },
+    {
+        title: "ISO 27002",
+        description: "Establish guidelines for organizational security practices and controls for information security management, safeguarding data and maintaining resilience against cyber threats."
+    },
+    {
+        title: "SOC-2",
+        description: "Ensure compliance with SOC 2 standards to provide assurance about the security, availability, processing integrity, confidentiality, and privacy of your systems and data."
     }
+
 ];
 
 // Function to Create Cards
