@@ -80,7 +80,6 @@ const services = [
             "Mobile Device Management (MDM)"
         ]
     }
-
 ];
 
 const solutions = [
@@ -160,7 +159,6 @@ const solutions = [
             "Post-Incident Reporting and Lessons Learned"
         ]
     }
-
 ];
 
 const complianceStandards = [
@@ -188,7 +186,6 @@ const complianceStandards = [
         title: "SOC 2",
         description: "Ensure compliance with SOC 2 standards to provide assurance about the security, availability, processing integrity, confidentiality, and privacy of your systems and data."
     }
-
 ];
 
 // Function to Create Cards
@@ -252,5 +249,16 @@ document.addEventListener('DOMContentLoaded', () => {
     darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+
+    // Touch events for mobile hover effects
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('touchstart', () => {
+            card.classList.add('active');
+        });
+
+        card.addEventListener('touchend', () => {
+            card.classList.remove('active');
+        });
     });
 });
