@@ -6,10 +6,8 @@
     --color-dark: #14202e;
     --color-white: #ffffff;
     --color-hover-text: #ffffff;
-    --footer-highlight-light: #1e90ff;
-    --footer-highlight-dark: #cccccc;
-    --neon-blue: #00bfff;
-    --neon-green: #39ff14;
+    --footer-highlight-light: #1e90ff; /* Blue for light mode */
+    --footer-highlight-dark: #cccccc; /* Grey for dark mode */
 }
 
 * {
@@ -19,10 +17,10 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: var(--color-white);
-    background-color: var(--color-darkest);
+    color: var(--color-darkest);
+    background-color: var(--color-white);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -95,7 +93,7 @@ header {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--color-white);
+    color: var(--color-darkest);
     transition: color 0.3s ease;
 }
 
@@ -104,7 +102,7 @@ body.dark-mode .dark-mode-toggle {
 }
 
 .download-button {
-    background-color: var(--neon-blue);
+    background-color: var(--color-light);
     color: var(--color-darkest);
     padding: 0.5rem 1rem;
     border: none;
@@ -115,7 +113,7 @@ body.dark-mode .dark-mode-toggle {
 }
 
 .download-button:hover {
-    background-color: var(--neon-green);
+    background-color: var(--color-medium);
 }
 
 /* Main Content Styles */
@@ -131,10 +129,8 @@ section {
 
 h2 {
     font-size: 2rem;
-    border-bottom: 2px solid var(--neon-blue);
+    border-bottom: 2px solid var(--color-medium);
     padding-bottom: 0.5rem;
-    font-family: 'Orbitron', sans-serif;
-    color: var(--neon-blue);
 }
 
 .grid {
@@ -147,40 +143,41 @@ h2 {
     padding: 1.5rem;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: var(--color-light);
+    color: var(--color-hover-text);
+}
+
+.card.services:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card.solutions {
+    background-color: var(--color-medium);
+}
+
+.card.solutions:hover {
+    transform: scale(0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card.compliance {
     background-color: var(--color-dark);
     color: var(--color-white);
-    border: 1px solid var(--neon-blue);
-    position: relative;
-    overflow: hidden;
 }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
-
-.card:hover::before, .card.touched::before {
-    left: 100%;
-}
-
-.card:hover, .card.touched {
-    transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 191, 255, 0.5);
+.card.compliance:hover {
+    transform: rotate(3deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
-    color: var(--neon-blue);
+    color: var(--color-white);
     text-decoration: underline;
 }
 
 .card h4 {
-    color: var(--neon-green);
+    color: var(--color-white);
     text-decoration: underline;
 }
 
@@ -195,7 +192,7 @@ li {
 
 li::before {
     content: "•";
-    color: var(--neon-blue);
+    color: var(--color-darkest);
     display: inline-block;
     width: 1em;
     margin-left: -1em;
@@ -203,8 +200,8 @@ li::before {
 
 /* Footer Styles */
 footer {
-    background-color: var(--color-darkest);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-darkest);
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
@@ -216,13 +213,9 @@ footer p {
 }
 
 footer a {
-    color: var(--neon-blue);
+    color: var(--footer-highlight-light);
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: var(--neon-green);
 }
 
 @media (max-width: 768px) {
@@ -245,5 +238,27 @@ footer a:hover {
     .download-button {
         font-size: 0.8rem;
         padding: 0.3rem 0.5rem;
+    }
+}
+
+/* PDF Specific Styles */
+@media print {
+    .logo {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        color: var(--color-darkest);
+        padding: 0.5rem;
     }
 }
