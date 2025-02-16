@@ -185,7 +185,7 @@ const complianceStandards = [
         description: "Establish guidelines for organizational security practices and controls for information security management, safeguarding data and maintaining resilience against cyber threats."
     },
     {
-        title: "SOC-2",
+        title: "SOC 2",
         description: "Ensure compliance with SOC 2 standards to provide assurance about the security, availability, processing integrity, confidentiality, and privacy of your systems and data."
     }
 
